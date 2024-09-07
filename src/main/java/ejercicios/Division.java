@@ -11,12 +11,17 @@ import java.util.Scanner;
 public class Division {
     public static String evaluar(int dividendo, int divisor) {
         // TODO: Coloca aquí el código del ejercicio 3: Division
-        int cociente = 0;
-        int residuo = 0;
+        int cociente = dividendo / divisor;;
+        int residuo = dividendo % divisor;;
         String respuesta = "La división es exacta. \n"
                 + "Cociente: " + cociente + "\n"
                 + "Residuo: " + residuo;
-        return respuesta;
+        
+        if (residuo == 0) {
+            return "La división es exacta. Cociente: " + cociente + ", Residuo: " + residuo;
+        } else {
+            return "La división no es exacta. Cociente: " + cociente + ", Residuo: " + residuo;
+        }
     }
     
     public static void main(String[] args) {
